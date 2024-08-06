@@ -11,14 +11,9 @@ import (
 	"os/signal"
 
 	"github.com/jackc/pgx/v5/pgxpool"
-	"github.com/joho/godotenv"
 )
 
 func main() {
-	if err := godotenv.Load(); err != nil {
-		panic(err)
-	}
-
 	ctx := context.Background()
 
 	pool, err := pgxpool.New(ctx, fmt.Sprintf(
