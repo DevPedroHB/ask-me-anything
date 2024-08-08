@@ -1,7 +1,7 @@
 import type { ComponentProps } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
-const likeQuestionButton = tv({
+const likeMessageButton = tv({
   base: [
     "mt-3 flex items-center gap-2 rounded-lg text-sm font-medium outline-none transition-all",
     "focus-within:ring-1 focus-within:ring-secondary-600 focus-within:ring-offset-2 focus-within:ring-offset-primary-100 dark:focus-within:ring-secondary-400 dark:focus-within:ring-offset-primary-900",
@@ -19,16 +19,16 @@ const likeQuestionButton = tv({
   },
 });
 
-interface ILikeQuestionButton
+interface ILikeMessageButton
   extends ComponentProps<"button">,
-    VariantProps<typeof likeQuestionButton> {}
+    VariantProps<typeof likeMessageButton> {}
 
-export function LikeQuestionButton({
+export function LikeMessageButton({
   className,
   variant,
   ...rest
-}: ILikeQuestionButton) {
+}: ILikeMessageButton) {
   return (
-    <button className={likeQuestionButton({ variant, className })} {...rest} />
+    <button className={likeMessageButton({ variant, className })} {...rest} />
   );
 }
